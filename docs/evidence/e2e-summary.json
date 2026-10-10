@@ -1,0 +1,219 @@
+{
+  "quark": {
+    "platform": "quark",
+    "url": "https://pan.quark.cn/s/1ad38e600f1e",
+    "name": "夸克网盘",
+    "filePrefix": "QuarkPan",
+    "host": "pan.quark.cn",
+    "path": "/s/1ad38e600f1e",
+    "ms": 2744,
+    "limitDepth": 3,
+    "nodes": 138,
+    "dirs": 14,
+    "files": 124,
+    "bytes": 1014923299,
+    "maxDepthSeen": 3,
+    "nestedDirs": 14,
+    "samples": [
+      {
+        "at": 1,
+        "dir": "微信读书榜单（精整分类）",
+        "children": [
+          "传记榜/",
+          "个人成长榜/",
+          "计算机榜/",
+          "教育学习榜/"
+        ]
+      },
+      {
+        "at": 2,
+        "dir": "传记榜",
+        "children": [
+          "《曾国藩》---唐浩明.epub",
+          "《毛泽东传》第1册 - 中央文献研究室.epub",
+          "《毛泽东传》第2卷 - 中共中央文献研究室.epub",
+          "《毛泽东传》第4册 - 中央文献研究室.epub"
+        ]
+      },
+      {
+        "at": 2,
+        "dir": "个人成长榜",
+        "children": [
+          "《李诞脱口秀工作手册》---李诞.epub",
+          "当下的力量（珍藏版） - （德国）埃克哈特•托利(Eckhart Tolle).epub",
+          "非暴力沟通 - 马歇尔•卢森堡.epub",
+          "高情商聊天术.epub"
+        ]
+      },
+      {
+        "at": 2,
+        "dir": "计算机榜",
+        "children": [
+          "编码_隐匿在计算机软硬件背后的语言 - 查尔斯•佩措尔德 (Charles Petzold).epub",
+          "黑客与画家_硅谷创业之父Paul Graham文集 - 阮一峰.epub",
+          "算法图解 (图灵程序设计丛书).epub",
+          "网络是怎样连接的.epub"
+        ]
+      },
+      {
+        "at": 2,
+        "dir": "教育学习榜",
+        "children": [
+          "【英文原版】小王子_ The Little Prince-振宇英语.mobi",
+          "芬兰教育全球第一的秘密：珍藏版 .epub",
+          "给青年的十二封信.epub",
+          "课本里的古诗词.epub"
+        ]
+      },
+      {
+        "at": 2,
+        "dir": "经济理财榜",
+        "children": [
+          "[价值：我对投资的思考]高瓴资本张磊.epub",
+          "半小时漫画股票.epub",
+          "半小时漫画经济学：生活常识篇（漫画科普开创者二混子新作！全网粉丝 - 陈磊·半小时漫画团队.epub",
+          "半小时漫画经济学2：金融危机篇（读客熊猫君出品。漫画科普开创者二 - 陈磊·半小时漫画团队.epub"
+        ]
+      }
+    ],
+    "ok": true,
+    "checked_at": "2026-10-10 08:44:33"
+  },
+  "pan123": {
+    "platform": "pan123",
+    "url": "https://www.123pan.com/s/yS8UVv-tqged.html?pwd=6666",
+    "name": "123云盘",
+    "filePrefix": "123Pan",
+    "host": "1813356033.share.123pan.cn",
+    "path": "/123pan/yS8UVv-tqged",
+    "ms": 1908,
+    "limitDepth": 3,
+    "nodes": 15,
+    "dirs": 8,
+    "files": 7,
+    "bytes": 4621393498,
+    "maxDepthSeen": 4,
+    "nestedDirs": 5,
+    "samples": [
+      {
+        "at": 1,
+        "dir": "BSD",
+        "children": [
+          "DragonFlyBSD/",
+          "FreeBSD/",
+          "NetBSD/",
+          "OpenBSD/"
+        ]
+      },
+      {
+        "at": 2,
+        "dir": "DragonFlyBSD",
+        "children": [
+          "6/"
+        ]
+      },
+      {
+        "at": 2,
+        "dir": "FreeBSD",
+        "children": [
+          "00_Hash.json",
+          "00_Hash.txt",
+          "00_hashsums.txt",
+          "校验值.txt"
+        ]
+      },
+      {
+        "at": 2,
+        "dir": "NetBSD",
+        "children": [
+          "9/"
+        ]
+      },
+      {
+        "at": 2,
+        "dir": "OpenBSD",
+        "children": [
+          "7/"
+        ]
+      }
+    ],
+    "ok": true,
+    "checked_at": "2026-10-10 08:44:46"
+  },
+  "xunlei": {
+    "platform": "xunlei",
+    "url": "https://pan.xunlei.com/s/VOMNKH0I4WyxhBUH85Mjx-e5A1?pwd=7kyx",
+    "name": "迅雷云盘",
+    "filePrefix": "XunleiPan",
+    "host": "pan.xunlei.com",
+    "path": "/s/VOMNKH0I4WyxhBUH85Mjx-e5A1",
+    "ms": 6966,
+    "limitDepth": 3,
+    "nodes": 1601,
+    "dirs": 1050,
+    "files": 551,
+    "bytes": 2410593222,
+    "maxDepthSeen": 4,
+    "nestedDirs": 15,
+    "samples": [
+      {
+        "at": 1,
+        "dir": "合集",
+        "children": [
+          "3DS+高清纹理包/",
+          "DC游戏+纹理包/",
+          "FC中文游戏全集(941个)/",
+          "GBA汉化游戏2023整理（287款）/"
+        ]
+      },
+      {
+        "at": 2,
+        "dir": "3DS+高清纹理包",
+        "children": [
+          "3DS高清纹理包/",
+          "3DS游戏/"
+        ]
+      },
+      {
+        "at": 2,
+        "dir": "DC游戏+纹理包",
+        "children": [
+          "DC高清纹理包/",
+          "DC游戏/"
+        ]
+      },
+      {
+        "at": 2,
+        "dir": "FC中文游戏全集(941个)",
+        "children": [
+          "4人麻将[星空汉化](JP)[TAB](0.18Mb)/",
+          "75宾果[Sachen](CN)[TAB](0.5Mb)/",
+          "90坦克[九班汉化](JP)[STG](0.31Mb)/",
+          "93超级魂[烟山软件修改](CN)[ACT](1Mb)/"
+        ]
+      },
+      {
+        "at": 2,
+        "dir": "GBA汉化游戏2023整理（287款）",
+        "children": [
+          "超级机器人大战系列（9作）/",
+          "恶魔城系列（3作）/",
+          "光明之魂系列（2作）/",
+          "哈利波特系列（2作）/"
+        ]
+      },
+      {
+        "at": 2,
+        "dir": "JAVA游戏",
+        "children": [
+          "(穿越)梦回大秦.jar",
+          "(穿越)梦回大秦之佳人无双.jar",
+          "(纯阳真人)吕洞宾.jar",
+          "（幻世）真龙之翼BT版.jar"
+        ]
+      }
+    ],
+    "ok": true,
+    "checked_at": "2026-10-10 08:45:03"
+  }
+}

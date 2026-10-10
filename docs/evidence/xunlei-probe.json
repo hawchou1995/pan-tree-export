@@ -1,0 +1,321 @@
+{
+  "share_url": "https://pan.xunlei.com/s/VOMNKH0I4WyxhBUH85Mjx-e5A1?pwd=7kyx",
+  "share_id": "VOMNKH0I4WyxhBUH85Mjx-e5A1",
+  "pass_code": "7kyx",
+  "variants": [
+    {
+      "label": "A_baseline_site_headers",
+      "url": "https://api-pan.xunlei.com/drive/v1/share?share_id=VOMNKH0I4WyxhBUH85Mjx-e5A1&pass_code=7kyx&limit=100&keyword=&pass_code_token=&page_token=&scene=NORMAL&order=DEFAULT_ORDER&thumbnail_size=SIZE_MEDIUM",
+      "sent_headers": [
+        "x-captcha-token",
+        "x-client-id",
+        "x-device-id"
+      ],
+      "status": 200,
+      "summary": {
+        "keys": [
+          "contain_sensitive_resource_text",
+          "expiration_at",
+          "expiration_left",
+          "expiration_left_seconds",
+          "file_num",
+          "files",
+          "icon_link",
+          "next_page_token",
+          "params",
+          "pass_code_token",
+          "preset_restore",
+          "restore_count_left",
+          "share_status",
+          "share_status_text",
+          "thumbnail_link",
+          "title",
+          "update_total_count",
+          "user_info"
+        ],
+        "share_status": "OK",
+        "file_num": "1",
+        "next_page_token": "",
+        "pass_code_token": "espDe8ujEGxq",
+        "n_files": 1,
+        "entries": [
+          {
+            "name": "合集",
+            "id": "VOMNKEYyGZ7GgZrsJ6gmRjpkA1",
+            "kind": "drive#folder",
+            "size": "0",
+            "isFolder": true
+          }
+        ]
+      },
+      "body_head": "{\"share_status\":\"OK\",\"share_status_text\":\"\",\"file_num\":\"1\",\"expiration_left\":\"-1\",\"expiration_left_seconds\":\"-1\",\"expiration_at\":\"-1\",\"restore_count_left\":\"-1\",\"files\":[{\"kind\":\"drive#folder\",\"id\":\"VOMNKEYyGZ7GgZrsJ6gmRjpkA1\",\"parent_id\":\"\",\"name\":\"合集\",\"user_id\":\"1167003508\",\"size\":\"0\",\"revision\":\"8"
+    },
+    {
+      "label": "drop_x-device-id",
+      "url": "https://api-pan.xunlei.com/drive/v1/share?share_id=VOMNKH0I4WyxhBUH85Mjx-e5A1&pass_code=7kyx&limit=100&keyword=&pass_code_token=&page_token=&scene=NORMAL&order=DEFAULT_ORDER&thumbnail_size=SIZE_MEDIUM",
+      "sent_headers": [
+        "x-captcha-token",
+        "x-client-id"
+      ],
+      "status": 400,
+      "summary": {
+        "keys": [
+          "details",
+          "error",
+          "error_code",
+          "error_description",
+          "error_details",
+          "error_url"
+        ],
+        "share_status": null,
+        "file_num": null,
+        "next_page_token": "",
+        "pass_code_token": "",
+        "n_files": null,
+        "entries": null
+      },
+      "body_head": "{\"error\":\"invalid_argument\",\"error_code\":3,\"error_url\":\"\",\"error_description\":\"请求参数错误\",\"error_details\":[{\"@type\":\"type.googleapis.com/google.rpc.DebugInfo\",\"stack_entries\":[],\"detail\":\"device_id is empty\"},{\"@type\":\"type.googleapis.com/google.rpc.LocalizedMessage\",\"locale\":\"zh-cn\",\"message\":\"请求参数错误\""
+    },
+    {
+      "label": "drop_x-client-id",
+      "url": "https://api-pan.xunlei.com/drive/v1/share?share_id=VOMNKH0I4WyxhBUH85Mjx-e5A1&pass_code=7kyx&limit=100&keyword=&pass_code_token=&page_token=&scene=NORMAL&order=DEFAULT_ORDER&thumbnail_size=SIZE_MEDIUM",
+      "sent_headers": [
+        "x-captcha-token",
+        "x-device-id"
+      ],
+      "status": 400,
+      "summary": {
+        "keys": [
+          "details",
+          "error",
+          "error_code",
+          "error_description",
+          "error_details",
+          "error_url"
+        ],
+        "share_status": null,
+        "file_num": null,
+        "next_page_token": "",
+        "pass_code_token": "",
+        "n_files": null,
+        "entries": null
+      },
+      "body_head": "{\"error\":\"captcha_invalid\",\"error_code\":9,\"error_url\":\"\",\"error_description\":\"验证码无效\",\"error_details\":[{\"@type\":\"type.googleapis.com/google.rpc.DebugInfo\",\"stack_entries\":[],\"detail\":\"client_id not match\"},{\"@type\":\"type.googleapis.com/google.rpc.LocalizedMessage\",\"locale\":\"zh-cn\",\"message\":\"验证码无效\"}]"
+    },
+    {
+      "label": "drop_x-captcha-token",
+      "url": "https://api-pan.xunlei.com/drive/v1/share?share_id=VOMNKH0I4WyxhBUH85Mjx-e5A1&pass_code=7kyx&limit=100&keyword=&pass_code_token=&page_token=&scene=NORMAL&order=DEFAULT_ORDER&thumbnail_size=SIZE_MEDIUM",
+      "sent_headers": [
+        "x-client-id",
+        "x-device-id"
+      ],
+      "status": 400,
+      "summary": {
+        "keys": [
+          "details",
+          "error",
+          "error_code",
+          "error_description",
+          "error_details",
+          "error_url"
+        ],
+        "share_status": null,
+        "file_num": null,
+        "next_page_token": "",
+        "pass_code_token": "",
+        "n_files": null,
+        "entries": null
+      },
+      "body_head": "{\"error\":\"captcha_invalid\",\"error_code\":9,\"error_url\":\"\",\"error_description\":\"验证码无效\",\"error_details\":[{\"@type\":\"type.googleapis.com/google.rpc.DebugInfo\",\"stack_entries\":[],\"detail\":\"captcha_token is empty\"},{\"@type\":\"type.googleapis.com/google.rpc.LocalizedMessage\",\"locale\":\"zh-cn\",\"message\":\"验证码无效"
+    },
+    {
+      "label": "no_headers_at_all",
+      "url": "https://api-pan.xunlei.com/drive/v1/share?share_id=VOMNKH0I4WyxhBUH85Mjx-e5A1&pass_code=7kyx&limit=100&keyword=&pass_code_token=&page_token=&scene=NORMAL&order=DEFAULT_ORDER&thumbnail_size=SIZE_MEDIUM",
+      "sent_headers": [],
+      "status": 400,
+      "summary": {
+        "keys": [
+          "details",
+          "error",
+          "error_code",
+          "error_description",
+          "error_details",
+          "error_url"
+        ],
+        "share_status": null,
+        "file_num": null,
+        "next_page_token": "",
+        "pass_code_token": "",
+        "n_files": null,
+        "entries": null
+      },
+      "body_head": "{\"error\":\"invalid_argument\",\"error_code\":3,\"error_url\":\"\",\"error_description\":\"请求参数错误\",\"error_details\":[{\"@type\":\"type.googleapis.com/google.rpc.DebugInfo\",\"stack_entries\":[],\"detail\":\"device_id is empty\"},{\"@type\":\"type.googleapis.com/google.rpc.LocalizedMessage\",\"locale\":\"zh-cn\",\"message\":\"请求参数错误\""
+    },
+    {
+      "label": "F_parent_id",
+      "url": "https://api-pan.xunlei.com/drive/v1/share?share_id=VOMNKH0I4WyxhBUH85Mjx-e5A1&pass_code=7kyx&limit=100&keyword=&pass_code_token=&page_token=&scene=NORMAL&order=DEFAULT_ORDER&thumbnail_size=SIZE_MEDIUM&parent_id=VOMNKEYyGZ7GgZrsJ6gmRjpkA1",
+      "sent_headers": [
+        "x-captcha-token",
+        "x-client-id",
+        "x-device-id"
+      ],
+      "status": 200,
+      "summary": {
+        "keys": [
+          "contain_sensitive_resource_text",
+          "expiration_at",
+          "expiration_left",
+          "expiration_left_seconds",
+          "file_num",
+          "files",
+          "icon_link",
+          "next_page_token",
+          "params",
+          "pass_code_token",
+          "preset_restore",
+          "restore_count_left",
+          "share_status",
+          "share_status_text",
+          "thumbnail_link",
+          "title",
+          "update_total_count",
+          "user_info"
+        ],
+        "share_status": "OK",
+        "file_num": "1",
+        "next_page_token": "",
+        "pass_code_token": "espDe8ujEGxq",
+        "n_files": 1,
+        "entries": [
+          {
+            "name": "合集",
+            "id": "VOMNKEYyGZ7GgZrsJ6gmRjpkA1",
+            "kind": "drive#folder",
+            "size": "0",
+            "isFolder": true
+          }
+        ]
+      },
+      "body_head": "{\"share_status\":\"OK\",\"share_status_text\":\"\",\"file_num\":\"1\",\"expiration_left\":\"-1\",\"expiration_left_seconds\":\"-1\",\"expiration_at\":\"-1\",\"restore_count_left\":\"-1\",\"files\":[{\"kind\":\"drive#folder\",\"id\":\"VOMNKEYyGZ7GgZrsJ6gmRjpkA1\",\"parent_id\":\"\",\"name\":\"合集\",\"user_id\":\"1167003508\",\"size\":\"0\",\"revision\":\"8"
+    },
+    {
+      "label": "G_folder_id",
+      "url": "https://api-pan.xunlei.com/drive/v1/share?share_id=VOMNKH0I4WyxhBUH85Mjx-e5A1&pass_code=7kyx&limit=100&keyword=&pass_code_token=&page_token=&scene=NORMAL&order=DEFAULT_ORDER&thumbnail_size=SIZE_MEDIUM&folder_id=VOMNKEYyGZ7GgZrsJ6gmRjpkA1",
+      "sent_headers": [
+        "x-captcha-token",
+        "x-client-id",
+        "x-device-id"
+      ],
+      "status": 200,
+      "summary": {
+        "keys": [
+          "contain_sensitive_resource_text",
+          "expiration_at",
+          "expiration_left",
+          "expiration_left_seconds",
+          "file_num",
+          "files",
+          "icon_link",
+          "next_page_token",
+          "params",
+          "pass_code_token",
+          "preset_restore",
+          "restore_count_left",
+          "share_status",
+          "share_status_text",
+          "thumbnail_link",
+          "title",
+          "update_total_count",
+          "user_info"
+        ],
+        "share_status": "OK",
+        "file_num": "1",
+        "next_page_token": "",
+        "pass_code_token": "espDe8ujEGxq",
+        "n_files": 1,
+        "entries": [
+          {
+            "name": "合集",
+            "id": "VOMNKEYyGZ7GgZrsJ6gmRjpkA1",
+            "kind": "drive#folder",
+            "size": "0",
+            "isFolder": true
+          }
+        ]
+      },
+      "body_head": "{\"share_status\":\"OK\",\"share_status_text\":\"\",\"file_num\":\"1\",\"expiration_left\":\"-1\",\"expiration_left_seconds\":\"-1\",\"expiration_at\":\"-1\",\"restore_count_left\":\"-1\",\"files\":[{\"kind\":\"drive#folder\",\"id\":\"VOMNKEYyGZ7GgZrsJ6gmRjpkA1\",\"parent_id\":\"\",\"name\":\"合集\",\"user_id\":\"1167003508\",\"size\":\"0\",\"revision\":\"8"
+    },
+    {
+      "label": "H_parent_id_empty",
+      "url": "https://api-pan.xunlei.com/drive/v1/share?share_id=VOMNKH0I4WyxhBUH85Mjx-e5A1&pass_code=7kyx&limit=100&keyword=&pass_code_token=&page_token=&scene=NORMAL&order=DEFAULT_ORDER&thumbnail_size=SIZE_MEDIUM&parent_id=",
+      "sent_headers": [
+        "x-captcha-token",
+        "x-client-id",
+        "x-device-id"
+      ],
+      "status": 200,
+      "summary": {
+        "keys": [
+          "contain_sensitive_resource_text",
+          "expiration_at",
+          "expiration_left",
+          "expiration_left_seconds",
+          "file_num",
+          "files",
+          "icon_link",
+          "next_page_token",
+          "params",
+          "pass_code_token",
+          "preset_restore",
+          "restore_count_left",
+          "share_status",
+          "share_status_text",
+          "thumbnail_link",
+          "title",
+          "update_total_count",
+          "user_info"
+        ],
+        "share_status": "OK",
+        "file_num": "1",
+        "next_page_token": "",
+        "pass_code_token": "espDe8ujEGxq",
+        "n_files": 1,
+        "entries": [
+          {
+            "name": "合集",
+            "id": "VOMNKEYyGZ7GgZrsJ6gmRjpkA1",
+            "kind": "drive#folder",
+            "size": "0",
+            "isFolder": true
+          }
+        ]
+      },
+      "body_head": "{\"share_status\":\"OK\",\"share_status_text\":\"\",\"file_num\":\"1\",\"expiration_left\":\"-1\",\"expiration_left_seconds\":\"-1\",\"expiration_at\":\"-1\",\"restore_count_left\":\"-1\",\"files\":[{\"kind\":\"drive#folder\",\"id\":\"VOMNKEYyGZ7GgZrsJ6gmRjpkA1\",\"parent_id\":\"\",\"name\":\"合集\",\"user_id\":\"1167003508\",\"size\":\"0\",\"revision\":\"8"
+    }
+  ],
+  "storage_keys": {
+    "local": [
+      "xlpan_pass_token",
+      "oauth_sign_in_Xqp0kJBXWhwaTpB6",
+      "/track/storage/remote_config_key",
+      "deviceid",
+      "xl_fp_rt",
+      "xlpan_pass_code",
+      "share_passcode_VOMNKH0I4WyxhBUH85Mjx-e5A1",
+      "captcha_Xqp0kJBXWhwaTpB6"
+    ],
+    "session": []
+  },
+  "page_title": "迅雷云盘",
+  "captured_headers": {
+    "x-device-id": "43a219…<25 字符已打码>",
+    "x-client-id": "Xqp0kJ…<16 字符已打码>",
+    "x-captcha-token": "ck0.pw…<25 字符已打码>"
+  },
+  "header_value_lens": {
+    "x-device-id": 32,
+    "x-client-id": 16,
+    "x-captcha-token": 763
+  },
+  "first_folder_id": "VOMNKEYyGZ7GgZrsJ6gmRjpkA1"
+}

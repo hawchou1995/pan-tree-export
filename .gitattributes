@@ -1,0 +1,2 @@
+# 全仓库统一 LF：产物 .user.js 是纯 LF 交付物，不能被 Windows 检出改成 CRLF
+* text=auto eol=lf

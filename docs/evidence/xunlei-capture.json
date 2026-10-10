@@ -1,0 +1,135 @@
+{
+  "probe_url": "https://pan.xunlei.com/s/VP3WCxbjc8FHUBXPwm2EbrYWA1?pwd=nxhq",
+  "page_title": "迅雷云盘",
+  "storage_keys": {
+    "local": [
+      "/track/storage/remote_config_key",
+      "captcha_Xqp0kJBXWhwaTpB6",
+      "deviceid",
+      "oauth_sign_in_Xqp0kJBXWhwaTpB6",
+      "share_passcode_VP3WCxbjc8FHUBXPwm2EbrYWA1",
+      "xl_fp_rt",
+      "xlpan_pass_code",
+      "xlpan_pass_token"
+    ],
+    "session": []
+  },
+  "calls": [
+    {
+      "phase": "request",
+      "method": "GET",
+      "url": "https://api-pan.xunlei.com/drive/v1/files?parent_id=&usage=DISPLAY&filters=%7B%22phase%22%3A%7B%22eq%22%3A%22PHASE_TYPE_COMPLETE%22%7D%2C%22trashed%22%3A%7B%22eq%22%3Afalse%7D%7D&with_audit=true&thumbnail_size=SIZE_SMALL&limit=50",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://pan.xunlei.com/",
+        "x-device-id": "4eb995…<32 字符已打码>",
+        "accept-language": "zh-CN",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"HeadlessChrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+        "x-captcha-token": "ck0.c8…<763 字符已打码>",
+        "content-type": "application/json",
+        "x-client-id": "Xqp0kJ…<16 字符已打码>"
+      },
+      "post_data": null
+    },
+    {
+      "phase": "response",
+      "status": 401,
+      "url": "https://api-pan.xunlei.com/drive/v1/files?parent_id=&usage=DISPLAY&filters=%7B%22phase%22%3A%7B%22eq%22%3A%22PHASE_TYPE_COMPLETE%22%7D%2C%22trashed%22%3A%7B%22eq%22%3Afalse%7D%7D&with_audit=true&thumbnail_size=SIZE_SMALL&limit=50",
+      "body": "{\"error\":\"unauthenticated\",\"error_code\":16,\"error_url\":\"\",\"error_description\":\"帐号认证失败，请重新登录\",\"error_details\":[{\"@type\":\"type.googleapis.com/google.rpc.DebugInfo\",\"stack_entries\":[],\"detail\":\"invalid auth header\"},{\"@type\":\"type.googleapis.com/google.rpc.LocalizedMessage\",\"locale\":\"zh-cn\",\"message\":\"帐号认证失败，请重新登录\"}],\"details\":[]}"
+    },
+    {
+      "phase": "request",
+      "method": "GET",
+      "url": "https://api-pan.xunlei.com/drive/v1/files?parent_id=&usage=DISPLAY&filters=%7B%22phase%22%3A%7B%22eq%22%3A%22PHASE_TYPE_COMPLETE%22%7D%2C%22trashed%22%3A%7B%22eq%22%3Afalse%7D%7D&with_audit=true&thumbnail_size=SIZE_SMALL&limit=50",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://pan.xunlei.com/",
+        "x-device-id": "4eb995…<32 字符已打码>",
+        "accept-language": "zh-CN",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"HeadlessChrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+        "x-captcha-token": "ck0.c8…<763 字符已打码>",
+        "content-type": "application/json",
+        "x-client-id": "Xqp0kJ…<16 字符已打码>"
+      },
+      "post_data": null
+    },
+    {
+      "phase": "response",
+      "status": 401,
+      "url": "https://api-pan.xunlei.com/drive/v1/files?parent_id=&usage=DISPLAY&filters=%7B%22phase%22%3A%7B%22eq%22%3A%22PHASE_TYPE_COMPLETE%22%7D%2C%22trashed%22%3A%7B%22eq%22%3Afalse%7D%7D&with_audit=true&thumbnail_size=SIZE_SMALL&limit=50",
+      "body": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation.>"
+    },
+    {
+      "phase": "request",
+      "method": "GET",
+      "url": "https://api-pan.xunlei.com/drive/v1/share?share_id=VP3WCxbjc8FHUBXPwm2EbrYWA1&pass_code=nxhq&limit=30&keyword=&pass_code_token=&page_token=&scene=NORMAL&order=DEFAULT_ORDER&thumbnail_size=SIZE_MEDIUM",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://pan.xunlei.com/",
+        "x-device-id": "4eb995…<32 字符已打码>",
+        "accept-language": "zh-CN",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"HeadlessChrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+        "x-captcha-token": "ck0.c8…<763 字符已打码>",
+        "content-type": "application/json",
+        "x-client-id": "Xqp0kJ…<16 字符已打码>"
+      },
+      "post_data": null
+    },
+    {
+      "phase": "response",
+      "status": 200,
+      "url": "https://api-pan.xunlei.com/drive/v1/share?share_id=VP3WCxbjc8FHUBXPwm2EbrYWA1&pass_code=nxhq&limit=30&keyword=&pass_code_token=&page_token=&scene=NORMAL&order=DEFAULT_ORDER&thumbnail_size=SIZE_MEDIUM",
+      "body": "{\"share_status\":\"OK\",\"share_status_text\":\"\",\"file_num\":\"1\",\"expiration_left\":\"-1\",\"expiration_left_seconds\":\"-1\",\"expiration_at\":\"-1\",\"restore_count_left\":\"-1\",\"files\":[{\"kind\":\"drive#file\",\"id\":\"VP3W3Rd8ZOwcinCjk6hMjvWsA1\",\"parent_id\":\"VP2oLL-WlLNA_4rKqfDXoe5zA1\",\"name\":\"A3328.jpg\",\"user_id\":\"970945556\",\"size\":\"258366848\",\"revision\":\"4\",\"file_extension\":\".jpg\",\"mime_type\":\"image/jpeg\",\"starred\":false,\"web_content_link\":\"\",\"created_time\":\"2026-10-09T22:29:36.460+08:00\",\"modified_time\":\"2026-10-09T22:32:38.629+08:00\",\"icon_link\":\"https://backstage-img-ssl.a.88cdn.com/db4bed190c7d54761f7fdd6fae3821ff5e7ddc48\",\"thumbnail_link\":\"\",\"md5_checksum\":\"\",\"hash\":\"\",\"links\":{},\"phase\":\"PHASE_TYPE_COMPLETE\",\"audit\":{\"status\":\"STATUS_OK\",\"message\":\"正常资源\",\"title\":\"\"},\"medias\":[{\"media_id\":\"\",\"media_name\":\"\",\"video\":null,\"link\":{\"url\":\"https://api-pan.xunlei.com/thumbnail/v1/jump?aid=get_share&ak=MzgyQjg0OEM2Mjg4OTg1Q0FCQUQxNEQwOUZFNkE2QjgwMjQ4RTc2MDNBNEI3NEZBMUQzNUUzOUEzN0ZERTA4ODExQTc0QTRFNzVBODJDRkIzNzRENUIwMjg5OEMyMDA3MDZGNkI4NTEyQUI2RDBBNkFGNzMwRUFFRDYwN0ExRDI3Qzg0NDk0QkVFNjUzMEE1OTZCMEU2MDgyOEJERjFCRA%3D%3D&cd=Xqp0kJBXWhwaTpB6&cpv=&dd=4eb9951a602e06445ac2ae36d013182d&gcid=D3DC008BFD9F418BD75"
+    },
+    {
+      "phase": "request",
+      "method": "GET",
+      "url": "https://api-pan.xunlei.com/drive/v1/share/get_restore_storage_reward?share_id=VP3WCxbjc8FHUBXPwm2EbrYWA1",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://pan.xunlei.com/",
+        "x-device-id": "4eb995…<32 字符已打码>",
+        "accept-language": "zh-CN",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"HeadlessChrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+        "x-captcha-token": "ck0.c8…<763 字符已打码>",
+        "content-type": "application/json",
+        "x-client-id": "Xqp0kJ…<16 字符已打码>"
+      },
+      "post_data": null
+    },
+    {
+      "phase": "request",
+      "method": "GET",
+      "url": "https://api-pan.xunlei.com/thumbnail/v1/jump?aid=get_share&ak=MzgyQjg0OEM2Mjg4OTg1Q0FCQUQxNEQwOUZFNkE2QjgwMjQ4RTc2MDNBNEI3NEZBMUQzNUUzOUEzN0ZERTA4ODExQTc0QTRFNzVBODJDRkIzNzRENUIwMjg5OEMyMDA3MDZGNkI4NTEyQUI2RDBBNkFGNzMwRUFFRDYwN0ExRDI3Qzg0NDk0QkVFNjUzMEE1OTZCMEU2MDgyOEJERjFCRA%3D%3D&cd=Xqp0kJBXWhwaTpB6&cpv=&dd=4eb9951a602e06445ac2ae36d013182d&gcid=D3DC008BFD9F418BD75944837AEF639F68F48FF5&pd=&pjd=2rvk4e3gkdnl7u1kl0k&pt=654&pv=&th=80&tt=0&tw=45&uid=970945556&vt=",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://pan.xunlei.com/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"HeadlessChrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "accept-language": "zh-CN",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "post_data": null
+    },
+    {
+      "phase": "response",
+      "status": 200,
+      "url": "https://api-pan.xunlei.com/drive/v1/share/get_restore_storage_reward?share_id=VP3WCxbjc8FHUBXPwm2EbrYWA1",
+      "body": "{\"show_banner\":true,\"banner_data\":{\"banner_text\":\"新用户登录转存送 1TB 空间，随机赠送先到先得\",\"sent_icon\":\"https://backstage-img-ssl.a.88cdn.com/bc898ad8407aad276525171aebd36233eb2b160c\",\"sent_count\":\"1099511627776\",\"restore_rule\":[{\"title\":\"参与条件\",\"content\":\"本活动仅平台新用户专属，老用户、回流用户及异常账号无法参与。\"},{\"title\":\"福利说明\",\"content\":\"1. 活动福利为随机限时发放，先到先得，领完即止。\\n2. 成功转存即可领取1TB免费存储空间，福利有效期为领取后30天。\\n3. 有效期结束后，1TB额外空间将自动回收，恢复为默认存储空间。\"},{\"title\":\"其他规则\",\"content\":\"每位新用户仅限领取一次福利，禁止刷号、作弊等违规行为。\"}],\"restore_success_title\":\"转存成功，已赠送您 1TB 空间权益\",\"restore_success_desc\":\"空间权益30天有效\"},\"scene\":\"NEW_USER_STORAGE\"}"
+    },
+    {
+      "phase": "response",
+      "status": 302,
+      "url": "https://api-pan.xunlei.com/thumbnail/v1/jump?aid=get_share&ak=MzgyQjg0OEM2Mjg4OTg1Q0FCQUQxNEQwOUZFNkE2QjgwMjQ4RTc2MDNBNEI3NEZBMUQzNUUzOUEzN0ZERTA4ODExQTc0QTRFNzVBODJDRkIzNzRENUIwMjg5OEMyMDA3MDZGNkI4NTEyQUI2RDBBNkFGNzMwRUFFRDYwN0ExRDI3Qzg0NDk0QkVFNjUzMEE1OTZCMEU2MDgyOEJERjFCRA%3D%3D&cd=Xqp0kJBXWhwaTpB6&cpv=&dd=4eb9951a602e06445ac2ae36d013182d&gcid=D3DC008BFD9F418BD75944837AEF639F68F48FF5&pd=&pjd=2rvk4e3gkdnl7u1kl0k&pt=654&pv=&th=80&tt=0&tw=45&uid=970945556&vt=",
+      "body": "<unreadable: Response.text: Response body is unavailable for redirect responses>"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "platform": "xunlei",
+  "url": "https://pan.xunlei.com/s/VOMNKH0I4WyxhBUH85Mjx-e5A1?pwd=7kyx",
+  "name": "迅雷云盘",
+  "filePrefix": "XunleiPan",
+  "host": "pan.xunlei.com",
+  "path": "/s/VOMNKH0I4WyxhBUH85Mjx-e5A1",
+  "ms": 6966,
+  "limitDepth": 3,
+  "nodes": 1601,
+  "dirs": 1050,
+  "files": 551,
+  "bytes": 2410593222,
+  "maxDepthSeen": 4,
+  "nestedDirs": 15,
+  "samples": [
+    {
+      "at": 1,
+      "dir": "合集",
+      "children": [
+        "3DS+高清纹理包/",
+        "DC游戏+纹理包/",
+        "FC中文游戏全集(941个)/",
+        "GBA汉化游戏2023整理（287款）/"
+      ]
+    },
+    {
+      "at": 2,
+      "dir": "3DS+高清纹理包",
+      "children": [
+        "3DS高清纹理包/",
+        "3DS游戏/"
+      ]
+    },
+    {
+      "at": 2,
+      "dir": "DC游戏+纹理包",
+      "children": [
+        "DC高清纹理包/",
+        "DC游戏/"
+      ]
+    },
+    {
+      "at": 2,
+      "dir": "FC中文游戏全集(941个)",
+      "children": [
+        "4人麻将[星空汉化](JP)[TAB](0.18Mb)/",
+        "75宾果[Sachen](CN)[TAB](0.5Mb)/",
+        "90坦克[九班汉化](JP)[STG](0.31Mb)/",
+        "93超级魂[烟山软件修改](CN)[ACT](1Mb)/"
+      ]
+    },
+    {
+      "at": 2,
+      "dir": "GBA汉化游戏2023整理（287款）",
+      "children": [
+        "超级机器人大战系列（9作）/",
+        "恶魔城系列（3作）/",
+        "光明之魂系列（2作）/",
+        "哈利波特系列（2作）/"
+      ]
+    },
+    {
+      "at": 2,
+      "dir": "JAVA游戏",
+      "children": [
+        "(穿越)梦回大秦.jar",
+        "(穿越)梦回大秦之佳人无双.jar",
+        "(纯阳真人)吕洞宾.jar",
+        "（幻世）真龙之翼BT版.jar"
+      ]
+    }
+  ],
+  "ok": true,
+  "checked_at": "2026-10-10 08:45:03"
+}

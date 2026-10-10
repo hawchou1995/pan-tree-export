@@ -1,0 +1,61 @@
+{
+  "platform": "pan123",
+  "url": "https://www.123pan.com/s/yS8UVv-tqged.html?pwd=6666",
+  "name": "123云盘",
+  "filePrefix": "123Pan",
+  "host": "1813356033.share.123pan.cn",
+  "path": "/123pan/yS8UVv-tqged",
+  "ms": 1908,
+  "limitDepth": 3,
+  "nodes": 15,
+  "dirs": 8,
+  "files": 7,
+  "bytes": 4621393498,
+  "maxDepthSeen": 4,
+  "nestedDirs": 5,
+  "samples": [
+    {
+      "at": 1,
+      "dir": "BSD",
+      "children": [
+        "DragonFlyBSD/",
+        "FreeBSD/",
+        "NetBSD/",
+        "OpenBSD/"
+      ]
+    },
+    {
+      "at": 2,
+      "dir": "DragonFlyBSD",
+      "children": [
+        "6/"
+      ]
+    },
+    {
+      "at": 2,
+      "dir": "FreeBSD",
+      "children": [
+        "00_Hash.json",
+        "00_Hash.txt",
+        "00_hashsums.txt",
+        "校验值.txt"
+      ]
+    },
+    {
+      "at": 2,
+      "dir": "NetBSD",
+      "children": [
+        "9/"
+      ]
+    },
+    {
+      "at": 2,
+      "dir": "OpenBSD",
+      "children": [
+        "7/"
+      ]
+    }
+  ],
+  "ok": true,
+  "checked_at": "2026-10-10 08:44:46"
+}
