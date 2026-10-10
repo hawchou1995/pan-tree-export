@@ -16,7 +16,7 @@ DST = ROOT / "pan-tree-export.user.js"
 HEADER = """// ==UserScript==
 // @name          网盘目录导出（多图标版+进度）
 // @namespace     https://greasyfork.org/zh-CN/users/1465036
-// @version       3.0.3
+// @version       3.0.4
 // @description   导出分享页完整树状目录，支持 百度网盘 / 夸克网盘 / 123云盘 / 迅雷云盘，适配文件夹📂、视频📽️、图片🖼️、文档📝、压缩包📦等图标，显示导出进度。百度网盘部分沿用 v2.1 原逻辑。
 // @author        intumu.com + AI Fix
 // @match         https://pan.baidu.com/s/*
@@ -520,6 +520,62 @@ PATCHES = [
         // 检查是否已存在
         if (document.getElementById('baiduExportBtn')) return;
         if (!PROVIDER) return;"""),
+
+    ("P17 面板样式隔离与统一",
+     """            <h3 style="margin-top:0">${PROVIDER.name}目录导出 v3.0</h3>""",
+     """            <style>
+                /* 样式隔离：宿主页 CSS 会泄漏进注入的 DOM —— 迅雷把 input[type=checkbox] 的 appearance 抹成 none
+                   （原生勾选框不再绘制，看起来"不可选"），还把继承字号顶到 24px 把整块面板放大。
+                   这里用 #id 作用域 + !important 把面板钉回统一外观；刻意不写 background/border，
+                   免得压掉原生勾选框自己的绘制。 */
+                #baiduExportDialog, #baiduExportDialog * { box-sizing: border-box; }
+                #baiduExportDialog {
+                    font-family: -apple-system, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif !important;
+                    font-size: 14px !important; line-height: 1.5 !important; color: #1f2328 !important;
+                    background: #fff !important; width: 360px; max-width: calc(100vw - 24px);
+                    letter-spacing: normal !important; text-transform: none !important;
+                    text-align: left !important; font-weight: normal !important;
+                }
+                #baiduExportDialog h3 {
+                    margin: 0 0 6px !important; font-size: 16px !important;
+                    font-weight: 600 !important; color: #1f2328 !important;
+                }
+                #baiduExportDialog label {
+                    display: flex !important; align-items: center !important; font-size: 14px !important;
+                    font-weight: normal !important; color: #1f2328 !important; line-height: 20px !important;
+                    margin-bottom: 6px !important; cursor: pointer !important;
+                }
+                #baiduExportDialog input[type="checkbox"] {
+                    -webkit-appearance: checkbox !important; appearance: auto !important;
+                    display: inline-block !important; position: static !important;
+                    width: 16px !important; height: 16px !important; min-width: 16px !important;
+                    margin: 0 8px 0 0 !important; padding: 0 !important; opacity: 1 !important;
+                    visibility: visible !important; transform: none !important; accent-color: #1677ff;
+                    font-size: inherit !important;
+                }
+                #baiduExportDialog #depthInput {
+                    width: 100% !important; height: 34px !important; padding: 6px 10px !important;
+                    -webkit-appearance: auto !important; appearance: auto !important;
+                    font-size: 14px !important; line-height: 20px !important; color: #1f2328 !important;
+                    background: #fff !important; border: 1px solid #d0d7de !important; border-radius: 6px !important;
+                }
+                #baiduExportDialog button {
+                    -webkit-appearance: none !important; appearance: none !important;
+                    height: 34px !important; padding: 0 16px !important; font-size: 14px !important;
+                    line-height: 32px !important; font-weight: 500 !important; border-radius: 6px !important;
+                    cursor: pointer !important; margin: 0 !important; text-align: center !important;
+                }
+                #baiduExportDialog #cancelBtn {
+                    margin-right: 8px !important; background: #f2f3f5 !important;
+                    color: #1f2328 !important; border: 1px solid #d0d7de !important;
+                }
+                #baiduExportDialog #confirmBtn {
+                    background: #1677ff !important; color: #fff !important; border: 1px solid #1677ff !important;
+                }
+                #baiduExportDialog a { color: #1677ff !important; text-decoration: none !important; }
+                #baiduExportDialog a:hover { text-decoration: underline !important; }
+            </style>
+            <h3 style="margin-top:0">${PROVIDER.name}目录导出 v3.0</h3>"""),
 
     ("P16 面板页脚加 GitHub 与论坛引流",
      """                <button id="confirmBtn" style="padding:8px 15px; background:#1677ff; color:white; border:none; border-radius:4px; cursor:pointer">导出</button>

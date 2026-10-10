@@ -67,7 +67,7 @@ python tools/verify_preserved.py
 ## 验证
 
 ```bash
-node test/pan-tree-export.test.js        # 93 项，测产物字节本身
+node test/pan-tree-export.test.js        # 97 项，测产物字节本身
 python tools/verify_preserved.py         # 百度逻辑逐字节保留
 python tools/e2e-providers.py            # 夸克 / 123 / 迅雷 真机（公开分享链接）
 python tools/e2e-baidu-regression.py     # 百度：v2.1 与新版同链接跑，目录树逐字节比
@@ -95,16 +95,19 @@ python tools/e2e-baidu-regression.py     # 百度：v2.1 与新版同链接跑�
 
 ---
 
-产物 sha256：`f5016150c0a59c1aa8c6f5dbe01c44cb346887b46cc3e46a5c8d1791f36b7137`（47,277 B，纯 LF，无 BOM）。
+产物 sha256：`096f0e411cc584a1c3e81534cc173315fc56e81c113bbfa30a598cd0810f3abc`（51,102 B，纯 LF，无 BOM）。
 
 ## 发布记录
 
-greasyfork：[脚本 562519](https://greasyfork.org/zh-CN/scripts/562519) 已更新到 **3.0.3**（2026-10-10）。
+greasyfork：[脚本 562519](https://greasyfork.org/zh-CN/scripts/562519) 已更新到 **3.0.4**（2026-10-10）。
 发布后用 `update.greasyfork.org` 把线上文件抓回来核对：**除 Greasy Fork 自己注入的 `@downloadURL` / `@updateURL`
 两行外，与本仓库产物逐字节一致**（纯 LF、无替换字符、无 BOM）。
 
 ![导出面板](docs/evidence/panel-baidu.png)
 
+- **3.0.4**：面板样式隔离与统一。宿主页 CSS 泄漏导致迅雷的勾选框"可见但看不见"、字号被顶到 24px；
+  改成作用域限定的 `!important` 规则后四平台计算样式完全一致（见上"面板样式与一致性"）。
+  同时把体检判据收紧到 appearance / 尺寸区间 / 跨平台一致性。
 - **3.0.3**：附加信息里加了一张导出面板截图（外链 jsDelivr，GF 的允许清单明确放行 `<img src=(https)>`）；
   装之前就能看见面板长什么样。已实测清洗器没吞掉这张图。
 - **3.0.2**：对话框底部加常驻页脚 —— 开源仓库 GitHub 与交流反馈 qingju.me。面板是用户唯一会看到的那一屏，
@@ -112,6 +115,33 @@ greasyfork：[脚本 562519](https://greasyfork.org/zh-CN/scripts/562519) 已更
 - **3.0.1**：修掉 3.0.0 首次上传时被分片切坏的一个注释字符（分片边界正好落在「步」字的 3 个字节中间）。
   Greasy Fork 不接受重复版本号，所以用 3.0.1 覆盖修正，功能与 3.0.0 完全相同。
 - 百度回归 diff 是在 3.0.0 产物上跑的；3.0.1 与之只差 `@version`，3.0.2 另加面板页脚。
+
+## 面板样式与一致性
+
+宿主页的 CSS 会泄漏进脚本注入的 DOM，而且**每个站泄漏得还不一样**：迅雷把 `input[type=checkbox]` 的
+`appearance` 抹成 `none`（原生勾选框不再绘制，用户看到一个空框、以为"不可选"），又把继承字号顶到 24px
+把整块面板放大；夸克和迅雷还把深度输入框的 `appearance` 改成 `none`，数字增减箭头时有时无。
+
+修法是**样式隔离**，不是逐站打补丁：面板内嵌一段作用域限定在 `#baiduExportDialog` 的 `!important` 规则
+（`tools/build.py` 的 P17），把字号、控件尺寸、勾选框外观、按钮样式一次性钉死。
+
+体检脚本 `python tools/panel-audit.py`：四个平台各开一次面板，量计算样式 + **真点一下看能不能切**，并出图。
+判据里刻意包含"跨平台一致性"，否则修完还会悄悄退化（第一版判据只看 display/visibility，就漏判了
+`appearance: none` 这种"可见但看不见"的情况）：
+
+| 指标 | 修前 | 修后 |
+|---|---|---|
+| 面板字号 | 13 / 14 / 16 / **24** px 各不相同 | **14px**（四平台同一个值） |
+| 勾选框 appearance | 迅雷 `none`（空框） | **auto**（原生绘制） |
+| 勾选框继承字号 | 13.33 / **24** px | **14px** |
+| 深度输入框 appearance | 有的 auto 有的 none（箭头时有时无） | **auto** |
+| 控件尺寸 | 输入框 33/39/54、按钮 33/37/52 | 输入框 320×34、按钮高 **34** |
+| 面板宽度 | 320 / 360 / 393 | **360** |
+| 勾选框点击翻转 | 能切但看不见 | 能切且命中即勾选框本身 |
+
+证据：`docs/evidence/panel-audit-summary.json`、`panel-audit-<平台>.json`、`panel-<平台>.png`。
+
+---
 
 ## 已知边界
 

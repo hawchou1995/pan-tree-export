@@ -1,5 +1,5 @@
 /**
- * pan-tree-export v3.0.3 自检 —— 测的是**产物字节**本身。
+ * pan-tree-export v3.0.4 自检 —— 测的是**产物字节**本身。
  *
  *   node test/pan-tree-export.test.js
  *
@@ -404,7 +404,7 @@ console.log('\n[11] 产物纪律');
     const base = fs.readFileSync(BASELINE, 'utf8');
     ok('无 BOM', !raw.slice(0, 3).equals(Buffer.from([0xEF, 0xBB, 0xBF])));
     ok('纯 LF（无 CRLF）', !raw.includes(Buffer.from('\r\n')));
-    ok('@version 3.0.3', /^\/\/ @version\s+3\.0\.3$/m.test(text));
+    ok('@version 3.0.4', /^\/\/ @version\s+3\.0\.4$/m.test(text));
     ok('四个平台的 @match 都在',
         ['https://pan\\.baidu\\.com/s/\\*', 'https://pan\\.quark\\.cn/s/\\*', '\\*://\\*\\.123pan\\.com/\\*', '\\*://\\*\\.123pan\\.cn/\\*', 'https://pan\\.xunlei\\.com/s/\\*']
             .every((m) => new RegExp('// @match\\s+' + m).test(text)));
@@ -429,6 +429,12 @@ console.log('\n[12] 面板页脚：引流链接真在对话框里');
     ok('两个链接都是新窗口打开的 <a>',
         (html.match(/<a [^>]*target="_blank"[^>]*rel="noopener"/g) || []).length >= 2);
     ok('页脚在按钮之后（面板最底部）', html.indexOf('pan-tree-export') > html.indexOf('confirmBtn'));
+    ok('面板里有作用域限定的 <style>（样式隔离）', /<style>[\s\S]*#baiduExportDialog/.test(html));
+    ok('勾选框被钉回原生外观（appearance: auto）',
+        /#baiduExportDialog input\[type="checkbox"\]\s*\{[^}]*appearance:\s*auto\s*!important/.test(html));
+    ok('勾选框不写 background/border（避免压掉原生绘制）',
+        !/#baiduExportDialog input\[type="checkbox"\]\s*\{[^}]*\b(background|border)\s*:/.test(html));
+    ok('面板字号被钉死（防宿主页放大）', /#baiduExportDialog\s*\{[\s\S]*?font-size:\s*14px\s*!important/.test(html));
 }
 
 }
