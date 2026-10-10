@@ -5,7 +5,7 @@
   "filePrefix": "XunleiPan",
   "host": "pan.xunlei.com",
   "path": "/s/VOMNKH0I4WyxhBUH85Mjx-e5A1",
-  "ms": 8490,
+  "ms": 7447,
   "limitDepth": 3,
   "nodes": 1601,
   "dirs": 1050,
@@ -75,5 +75,5 @@
   "dirsOver100": 2,
   "filesOver100": 0,
   "ok": true,
-  "checked_at": "2026-10-10 09:11:03"
+  "checked_at": "2026-10-10 10:08:22"
 }

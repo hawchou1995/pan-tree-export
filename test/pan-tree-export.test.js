@@ -1,5 +1,5 @@
 /**
- * pan-tree-export v3.0.1 自检 —— 测的是**产物字节**本身。
+ * pan-tree-export v3.0.2 自检 —— 测的是**产物字节**本身。
  *
  *   node test/pan-tree-export.test.js
  *
@@ -34,7 +34,7 @@ const EXPORTS = [
     'PROVIDER', 'PROVIDERS', 'extractItemFields', 'quarkNormalize', 'pan123Normalize',
     'xunleiNormalize', 'quarkShareId', 'pan123ShareKey', 'pan123Pwd', 'xunleiShareId',
     'xunleiHeaders', 'formatSize', 'getFileIcon', 'buildTree', 'countTotalNodes',
-    'calcTotalSize', 'exportText'
+    'calcTotalSize', 'exportText', 'createDialog'
 ];
 
 // 初始页设成迅雷分享页：脚本在加载时就算 PROVIDER，必须命中一个，
@@ -65,9 +65,16 @@ function makeSandbox() {
     box.document = {
         cookie: '',
         readyState: 'loading',
-        body: { appendChild() { }, removeChild() { } },
+        body: { appendChild(el) { box.__appended.push(el); }, removeChild() { } },
         addEventListener() { },
-        getElementById() { return null; },
+        // 只认「真被 append 过」的元素，外加对话框里那两个按钮的替身：
+        // 对话框守卫生效（没建过 = null），而 innerHTML 里的按钮解析不出来，就给个能挂 onclick 的替身
+        getElementById(id) {
+            const found = box.__appended.find((e) => e.id === id);
+            if (found) return found;
+            if (id === 'cancelBtn' || id === 'confirmBtn') return { onclick: null, style: {}, innerText: '', disabled: false };
+            return null;
+        },
         querySelectorAll() { return []; },
         createElement(tag) {
             return {
@@ -80,6 +87,7 @@ function makeSandbox() {
     };
     box.window = { addEventListener() { }, location: box.location };
     box.unsafeWindow = {};
+    box.__appended = [];
     box.__alerts = [];
     box.alert = (m) => { box.__alerts.push(String(m)); };
     box.GM_registerMenuCommand = () => { };
@@ -396,7 +404,7 @@ console.log('\n[11] 产物纪律');
     const base = fs.readFileSync(BASELINE, 'utf8');
     ok('无 BOM', !raw.slice(0, 3).equals(Buffer.from([0xEF, 0xBB, 0xBF])));
     ok('纯 LF（无 CRLF）', !raw.includes(Buffer.from('\r\n')));
-    ok('@version 3.0.1', /^\/\/ @version\s+3\.0\.1$/m.test(text));
+    ok('@version 3.0.2', /^\/\/ @version\s+3\.0\.2$/m.test(text));
     ok('四个平台的 @match 都在',
         ['https://pan\\.baidu\\.com/s/\\*', 'https://pan\\.quark\\.cn/s/\\*', '\\*://\\*\\.123pan\\.com/\\*', '\\*://\\*\\.123pan\\.cn/\\*', 'https://pan\\.xunlei\\.com/s/\\*']
             .every((m) => new RegExp('// @match\\s+' + m).test(text)));
@@ -406,6 +414,21 @@ console.log('\n[11] 产物纪律');
     ok('百度 API 调用点一处没少', count(text) === count(base), count(base) + ' -> ' + count(text));
     ok('百度方案A/B 与降级分支仍在',
         text.includes('方案A：/share/wxlist') && text.includes('方案B：/share/list') && text.includes("apiMode = 'wxlist'"));
+}
+
+console.log('\n[12] 面板页脚：引流链接真在对话框里');
+{
+    box.__appended = [];
+    T.createDialog();
+    const dlg = box.__appended.find((e) => e.id === 'baiduExportDialog');
+    ok('对话框被创建并挂到 body', !!dlg, JSON.stringify(box.__appended.map((e) => e.id)));
+    const html = dlg ? String(dlg.innerHTML || '') : '';
+    ok('页脚里有 GitHub 仓库链接',
+        /href="https:\/\/github\.com\/hawchou1995\/pan-tree-export"/.test(html), html.slice(-300));
+    ok('页脚里有 qingju.me 链接', /href="https:\/\/qingju\.me"/.test(html), html.slice(-300));
+    ok('两个链接都是新窗口打开的 <a>',
+        (html.match(/<a [^>]*target="_blank"[^>]*rel="noopener"/g) || []).length >= 2);
+    ok('页脚在按钮之后（面板最底部）', html.indexOf('pan-tree-export') > html.indexOf('confirmBtn'));
 }
 
 }

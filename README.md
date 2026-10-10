@@ -13,6 +13,8 @@
 文档 `📝`、压缩包 `📦`、音频 `🎵`，带文件大小、文件夹递归总大小、导出进度百分比。
 
 安装：装到 Tampermonkey / Violentmonkey 后打开分享页即可（123 云盘若设了提取码，用带 `?pwd=` 的完整链接打开）。
+面板底部常驻「开源仓库 GitHub · 交流反馈 qingju.me」两个入口（截图：`docs/evidence/panel-baidu.png`、`panel-xunlei.png`，
+用 `python tools/panel-shot.py baidu` 可复现）。
 
 ---
 
@@ -65,7 +67,7 @@ python tools/verify_preserved.py
 ## 验证
 
 ```bash
-node test/pan-tree-export.test.js        # 88 项，测产物字节本身
+node test/pan-tree-export.test.js        # 93 项，测产物字节本身
 python tools/verify_preserved.py         # 百度逻辑逐字节保留
 python tools/e2e-providers.py            # 夸克 / 123 / 迅雷 真机（公开分享链接）
 python tools/e2e-baidu-regression.py     # 百度：v2.1 与新版同链接跑，目录树逐字节比
@@ -93,18 +95,19 @@ python tools/e2e-baidu-regression.py     # 百度：v2.1 与新版同链接跑�
 
 ---
 
-产物 sha256：`3cf6cd2e6729ae1ef88e791f86b90bb1e06387dac58602bde06b55a43b024a91`（46,772 B，纯 LF，无 BOM）。
+产物 sha256：`8f8fb3ab10f2453c66ea4042d020d5292338ab8d5d2763cefece29a23805860b`（47,277 B，纯 LF，无 BOM）。
 
 ## 发布记录
 
-greasyfork：[脚本 562519](https://greasyfork.org/zh-CN/scripts/562519) 已更新到 **3.0.1**（2026-10-10）。
+greasyfork：[脚本 562519](https://greasyfork.org/zh-CN/scripts/562519) 已更新到 **3.0.2**（2026-10-10）。
 发布后用 `update.greasyfork.org` 把线上文件抓回来核对：**除 Greasy Fork 自己注入的 `@downloadURL` / `@updateURL`
-两行外，与本仓库产物逐字节一致**（46,772 B、纯 LF、无替换字符）。
+两行外，与本仓库产物逐字节一致**（纯 LF、无替换字符、无 BOM）。
 
-> 为什么是 3.0.1：3.0.0 首次上传时传输管道把一个注释里的「步」字切成了 3 个替换字符
-> （分片边界正好落在该字 3 个字节中间），而 Greasy Fork 不接受重复版本号，所以用 3.0.1 修正；
-> 功能与 3.0.0 完全相同，只差 `@version` 一行。
-> 上面的百度回归 diff 是在 3.0.0 产物上跑的，3.0.1 与之只差 `@version` 字符串。
+- **3.0.2**：对话框底部加常驻页脚 —— 开源仓库 GitHub 与交流反馈 qingju.me。面板是用户唯一会看到的那一屏，
+  引流不该只躺在发布页和仓库 README 上。同一版把 `verify_preserved.py` 的锚点数改成自动统计，不再写死。
+- **3.0.1**：修掉 3.0.0 首次上传时被分片切坏的一个注释字符（分片边界正好落在「步」字的 3 个字节中间）。
+  Greasy Fork 不接受重复版本号，所以用 3.0.1 覆盖修正，功能与 3.0.0 完全相同。
+- 百度回归 diff 是在 3.0.0 产物上跑的；3.0.1 与之只差 `@version`，3.0.2 另加面板页脚。
 
 ## 已知边界
 

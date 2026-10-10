@@ -54,7 +54,8 @@ def main() -> int:
         else:
             print("  长度不同：底稿 %d / 还原 %d" % (len(BASE), len(text)))
         return 1
-    print("结论：百度网盘那段逻辑除 15 处补丁锚点外，与线上 v2.1.0 逐字节一致。")
+    print("结论：百度网盘那段逻辑除 %d 处补丁锚点外，与线上 v2.1.0 逐字节一致。"
+          % sum(1 for _, old, _ in PATCHES if old is not None))
     return 0
 
 

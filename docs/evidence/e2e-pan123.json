@@ -5,7 +5,7 @@
   "filePrefix": "123Pan",
   "host": "1833371601.share.123pan.cn",
   "path": "/123pan/uurhTd-CkYUv",
-  "ms": 21322,
+  "ms": 21176,
   "limitDepth": 3,
   "nodes": 692,
   "dirs": 62,
@@ -79,5 +79,5 @@
   "dirsOver100": 1,
   "filesOver100": 0,
   "ok": true,
-  "checked_at": "2026-10-10 09:10:44"
+  "checked_at": "2026-10-10 10:08:05"
 }

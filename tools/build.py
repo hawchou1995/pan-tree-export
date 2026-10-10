@@ -16,7 +16,7 @@ DST = ROOT / "pan-tree-export.user.js"
 HEADER = """// ==UserScript==
 // @name          网盘目录导出（多图标版+进度）
 // @namespace     https://greasyfork.org/zh-CN/users/1465036
-// @version       3.0.1
+// @version       3.0.2
 // @description   导出分享页完整树状目录，支持 百度网盘 / 夸克网盘 / 123云盘 / 迅雷云盘，适配文件夹📂、视频📽️、图片🖼️、文档📝、压缩包📦等图标，显示导出进度。百度网盘部分沿用 v2.1 原逻辑。
 // @author        intumu.com + AI Fix
 // @match         https://pan.baidu.com/s/*
@@ -520,6 +520,17 @@ PATCHES = [
         // 检查是否已存在
         if (document.getElementById('baiduExportBtn')) return;
         if (!PROVIDER) return;"""),
+
+    ("P16 面板页脚加 GitHub 与论坛引流",
+     """                <button id="confirmBtn" style="padding:8px 15px; background:#1677ff; color:white; border:none; border-radius:4px; cursor:pointer">导出</button>
+            </div>""",
+     """                <button id="confirmBtn" style="padding:8px 15px; background:#1677ff; color:white; border:none; border-radius:4px; cursor:pointer">导出</button>
+            </div>
+            <div style="margin-top:12px; padding-top:10px; border-top:1px solid #eee; text-align:center; font-size:12px; color:#666;">
+                开源仓库 <a href="https://github.com/hawchou1995/pan-tree-export" target="_blank" rel="noopener" style="color:#1677ff; text-decoration:none;">GitHub</a>
+                &nbsp;·&nbsp;
+                交流反馈 <a href="https://qingju.me" target="_blank" rel="noopener" style="color:#1677ff; text-decoration:none;">qingju.me</a>
+            </div>"""),
 ]
 
 

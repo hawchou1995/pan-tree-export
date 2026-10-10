@@ -5,7 +5,7 @@
   "filePrefix": "QuarkPan",
   "host": "pan.quark.cn",
   "path": "/s/1ad38e600f1e",
-  "ms": 3912,
+  "ms": 3353,
   "limitDepth": 3,
   "nodes": 138,
   "dirs": 14,
@@ -79,5 +79,5 @@
   "dirsOver100": 0,
   "filesOver100": 0,
   "ok": true,
-  "checked_at": "2026-10-10 09:10:11"
+  "checked_at": "2026-10-10 10:07:32"
 }
