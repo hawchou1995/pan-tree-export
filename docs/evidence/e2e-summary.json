@@ -6,7 +6,7 @@
     "filePrefix": "QuarkPan",
     "host": "pan.quark.cn",
     "path": "/s/1ad38e600f1e",
-    "ms": 2744,
+    "ms": 3769,
     "limitDepth": 3,
     "nodes": 138,
     "dirs": 14,
@@ -77,7 +77,7 @@
       }
     ],
     "ok": true,
-    "checked_at": "2026-10-10 08:44:33"
+    "checked_at": "2026-10-10 08:55:03"
   },
   "pan123": {
     "platform": "pan123",
@@ -86,7 +86,7 @@
     "filePrefix": "123Pan",
     "host": "1813356033.share.123pan.cn",
     "path": "/123pan/yS8UVv-tqged",
-    "ms": 1908,
+    "ms": 2289,
     "limitDepth": 3,
     "nodes": 15,
     "dirs": 8,
@@ -138,7 +138,7 @@
       }
     ],
     "ok": true,
-    "checked_at": "2026-10-10 08:44:46"
+    "checked_at": "2026-10-10 08:55:17"
   },
   "xunlei": {
     "platform": "xunlei",
@@ -147,7 +147,7 @@
     "filePrefix": "XunleiPan",
     "host": "pan.xunlei.com",
     "path": "/s/VOMNKH0I4WyxhBUH85Mjx-e5A1",
-    "ms": 6966,
+    "ms": 7829,
     "limitDepth": 3,
     "nodes": 1601,
     "dirs": 1050,
@@ -214,6 +214,6 @@
       }
     ],
     "ok": true,
-    "checked_at": "2026-10-10 08:45:03"
+    "checked_at": "2026-10-10 08:55:34"
   }
 }
