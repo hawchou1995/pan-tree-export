@@ -95,14 +95,18 @@ python tools/e2e-baidu-regression.py     # 百度：v2.1 与新版同链接跑�
 
 ---
 
-产物 sha256：`8f8fb3ab10f2453c66ea4042d020d5292338ab8d5d2763cefece29a23805860b`（47,277 B，纯 LF，无 BOM）。
+产物 sha256：`f5016150c0a59c1aa8c6f5dbe01c44cb346887b46cc3e46a5c8d1791f36b7137`（47,277 B，纯 LF，无 BOM）。
 
 ## 发布记录
 
-greasyfork：[脚本 562519](https://greasyfork.org/zh-CN/scripts/562519) 已更新到 **3.0.2**（2026-10-10）。
+greasyfork：[脚本 562519](https://greasyfork.org/zh-CN/scripts/562519) 已更新到 **3.0.3**（2026-10-10）。
 发布后用 `update.greasyfork.org` 把线上文件抓回来核对：**除 Greasy Fork 自己注入的 `@downloadURL` / `@updateURL`
 两行外，与本仓库产物逐字节一致**（纯 LF、无替换字符、无 BOM）。
 
+![导出面板](docs/evidence/panel-baidu.png)
+
+- **3.0.3**：附加信息里加了一张导出面板截图（外链 jsDelivr，GF 的允许清单明确放行 `<img src=(https)>`）；
+  装之前就能看见面板长什么样。已实测清洗器没吞掉这张图。
 - **3.0.2**：对话框底部加常驻页脚 —— 开源仓库 GitHub 与交流反馈 qingju.me。面板是用户唯一会看到的那一屏，
   引流不该只躺在发布页和仓库 README 上。同一版把 `verify_preserved.py` 的锚点数改成自动统计，不再写死。
 - **3.0.1**：修掉 3.0.0 首次上传时被分片切坏的一个注释字符（分片边界正好落在「步」字的 3 个字节中间）。

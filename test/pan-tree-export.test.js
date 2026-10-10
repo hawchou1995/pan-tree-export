@@ -1,5 +1,5 @@
 /**
- * pan-tree-export v3.0.2 自检 —— 测的是**产物字节**本身。
+ * pan-tree-export v3.0.3 自检 —— 测的是**产物字节**本身。
  *
  *   node test/pan-tree-export.test.js
  *
@@ -404,7 +404,7 @@ console.log('\n[11] 产物纪律');
     const base = fs.readFileSync(BASELINE, 'utf8');
     ok('无 BOM', !raw.slice(0, 3).equals(Buffer.from([0xEF, 0xBB, 0xBF])));
     ok('纯 LF（无 CRLF）', !raw.includes(Buffer.from('\r\n')));
-    ok('@version 3.0.2', /^\/\/ @version\s+3\.0\.2$/m.test(text));
+    ok('@version 3.0.3', /^\/\/ @version\s+3\.0\.3$/m.test(text));
     ok('四个平台的 @match 都在',
         ['https://pan\\.baidu\\.com/s/\\*', 'https://pan\\.quark\\.cn/s/\\*', '\\*://\\*\\.123pan\\.com/\\*', '\\*://\\*\\.123pan\\.cn/\\*', 'https://pan\\.xunlei\\.com/s/\\*']
             .every((m) => new RegExp('// @match\\s+' + m).test(text)));
