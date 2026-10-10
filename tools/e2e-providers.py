@@ -22,7 +22,8 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 CASES = [
     # 百度网盘另有专项回归（页面里没有油猴引擎，得先垫 GM_xmlhttpRequest）：tools/e2e-baidu-regression.py
     ("quark", "https://pan.quark.cn/s/1ad38e600f1e"),
-    ("pan123", "https://www.123pan.com/s/yS8UVv-tqged.html?pwd=6666"),
+    # 这条分享落在镜像域 <uid>.share.123pan.cn 上，且单目录 314 项 —— 同时覆盖镜像域与翻页
+    ("pan123", "https://1833371601.share.123pan.cn/123pan/uurhTd-CkYUv?pwd=O3uu"),
     ("xunlei", "https://pan.xunlei.com/s/VOMNKH0I4WyxhBUH85Mjx-e5A1?pwd=7kyx"),
 ]
 
@@ -46,7 +47,7 @@ JS_WALK = """async (maxDepth) => {
     return { platform: p.id, name: p.name, error: String(e && e.message || e) };
   }
   const ms = Date.now() - t0;
-  let dirs = 0, files = 0, bytes = 0, maxDepthSeen = 0, nestedDirs = 0;
+  let dirs = 0, files = 0, bytes = 0, maxDepthSeen = 0, nestedDirs = 0, maxDirChildren = 0, dirsOver100 = 0, filesOver100 = 0;
   const samples = [];
   const walk = (nodes, depth) => {
     maxDepthSeen = Math.max(maxDepthSeen, depth);
@@ -54,6 +55,10 @@ JS_WALK = """async (maxDepth) => {
       if (n.isDir) {
         dirs++;
         if (n.children && n.children.length) nestedDirs++;
+        if (n.children) {
+          maxDirChildren = Math.max(maxDirChildren, n.children.length);
+          if (n.children.length > 100) dirsOver100++;
+        }
         if (samples.length < 6 && n.children && n.children.length) {
           samples.push({ at: depth, dir: n.name, children: n.children.slice(0, 4).map((c) => (c.isDir ? c.name + '/' : c.name)) });
         }
@@ -70,6 +75,7 @@ JS_WALK = """async (maxDepth) => {
     host: location.host, path: location.pathname,
     ms, limitDepth: maxDepth,
     nodes: dirs + files, dirs, files, bytes, maxDepthSeen, nestedDirs, samples,
+    maxDirChildren, dirsOver100, filesOver100,
     ok: (dirs + files) > 0,
   };
 }"""
@@ -77,9 +83,12 @@ JS_WALK = """async (maxDepth) => {
 
 def main() -> int:
     args = sys.argv[1:]
-    cases = [c for c in CASES if c[0] == args[0]] if args else CASES
-    if args and not cases:
+    if len(args) >= 2:
         cases = [(args[0], args[1])]
+    elif args:
+        cases = [c for c in CASES if c[0] == args[0]]
+    else:
+        cases = CASES
     EVID.mkdir(parents=True, exist_ok=True)
 
     src = SRC.read_text(encoding="utf-8")
@@ -106,9 +115,10 @@ def main() -> int:
                 rec["error"] = "%s: %s" % (type(exc).__name__, exc)
             rec["checked_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
             report[pid] = rec
-            print("[%s] ok=%s nodes=%s dirs=%s files=%s depth=%s nested=%s %sms %s" % (
+            print("[%s] ok=%s nodes=%s dirs=%s files=%s depth=%s nested=%s maxDir=%s dirs>100=%s %sms %s" % (
                 pid, rec.get("ok"), rec.get("nodes"), rec.get("dirs"), rec.get("files"),
-                rec.get("maxDepthSeen"), rec.get("nestedDirs"), rec.get("ms"),
+                rec.get("maxDepthSeen"), rec.get("nestedDirs"), rec.get("maxDirChildren"),
+                rec.get("dirsOver100"), rec.get("ms"),
                 rec.get("error", "")))
             if rec.get("samples"):
                 for s in rec["samples"][:3]:

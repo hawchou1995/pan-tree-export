@@ -6,7 +6,7 @@
     "filePrefix": "QuarkPan",
     "host": "pan.quark.cn",
     "path": "/s/1ad38e600f1e",
-    "ms": 3769,
+    "ms": 3912,
     "limitDepth": 3,
     "nodes": 138,
     "dirs": 14,
@@ -76,69 +76,94 @@
         ]
       }
     ],
+    "maxDirChildren": 13,
+    "dirsOver100": 0,
+    "filesOver100": 0,
     "ok": true,
-    "checked_at": "2026-10-10 08:55:03"
+    "checked_at": "2026-10-10 09:10:11"
   },
   "pan123": {
     "platform": "pan123",
-    "url": "https://www.123pan.com/s/yS8UVv-tqged.html?pwd=6666",
+    "url": "https://1833371601.share.123pan.cn/123pan/uurhTd-CkYUv?pwd=O3uu",
     "name": "123云盘",
     "filePrefix": "123Pan",
-    "host": "1813356033.share.123pan.cn",
-    "path": "/123pan/yS8UVv-tqged",
-    "ms": 2289,
+    "host": "1833371601.share.123pan.cn",
+    "path": "/123pan/uurhTd-CkYUv",
+    "ms": 21322,
     "limitDepth": 3,
-    "nodes": 15,
-    "dirs": 8,
-    "files": 7,
-    "bytes": 4621393498,
-    "maxDepthSeen": 4,
-    "nestedDirs": 5,
+    "nodes": 692,
+    "dirs": 62,
+    "files": 630,
+    "bytes": 31621769131,
+    "maxDepthSeen": 3,
+    "nestedDirs": 62,
     "samples": [
       {
         "at": 1,
-        "dir": "BSD",
+        "dir": "新概念3李延隆版",
         "children": [
-          "DragonFlyBSD/",
-          "FreeBSD/",
-          "NetBSD/",
-          "OpenBSD/"
+          "新概念3 李延隆版lesson (01)/",
+          "新概念3 李延隆版lesson (02)/",
+          "新概念3 李延隆版lesson (03)/",
+          "新概念3 李延隆版lesson (04)/"
         ]
       },
       {
         "at": 2,
-        "dir": "DragonFlyBSD",
+        "dir": "新概念3 李延隆版lesson (01)",
         "children": [
-          "6/"
+          "1.Lesson 1 单词讲解1.flv",
+          "2.Lesson 1 单词讲解2.flv",
+          "3.Lesson 1 单词讲解3.flv",
+          "4.Lesson 1 单词讲解4.flv"
         ]
       },
       {
         "at": 2,
-        "dir": "FreeBSD",
+        "dir": "新概念3 李延隆版lesson (02)",
         "children": [
-          "00_Hash.json",
-          "00_Hash.txt",
-          "00_hashsums.txt",
-          "校验值.txt"
+          "15.Lesson 2 单词讲解.flv",
+          "16.Lesson 2 课文讲解1.flv",
+          "17.Lesson 2 课文讲解2.flv",
+          "18.Lesson 2 课文讲解3.flv"
         ]
       },
       {
         "at": 2,
-        "dir": "NetBSD",
+        "dir": "新概念3 李延隆版lesson (03)",
         "children": [
-          "9/"
+          "19.Lesson 3 单词讲解1.flv",
+          "20.Lesson 3 单词讲解2.flv",
+          "21.Lesson 3 单词讲解3.flv",
+          "22.Lesson 3 课文讲解1.flv"
         ]
       },
       {
         "at": 2,
-        "dir": "OpenBSD",
+        "dir": "新概念3 李延隆版lesson (04)",
         "children": [
-          "7/"
+          "26.Lesson 4 单词讲解1.flv",
+          "27.Lesson 4 单词讲解2.flv",
+          "28.Lesson 4 课文讲解1.flv",
+          "29.Lesson 4 课文讲解 2.flv"
+        ]
+      },
+      {
+        "at": 2,
+        "dir": "新概念3 李延隆版lesson (05)",
+        "children": [
+          "33.Lesson 5 单词讲解1.flv",
+          "34.Lesson 5 单词讲解2.flv",
+          "35.Lesson 5 单词讲解3.flv",
+          "36.Lesson 5 课文讲解1.flv"
         ]
       }
     ],
+    "maxDirChildren": 314,
+    "dirsOver100": 1,
+    "filesOver100": 0,
     "ok": true,
-    "checked_at": "2026-10-10 08:55:17"
+    "checked_at": "2026-10-10 09:10:44"
   },
   "xunlei": {
     "platform": "xunlei",
@@ -147,7 +172,7 @@
     "filePrefix": "XunleiPan",
     "host": "pan.xunlei.com",
     "path": "/s/VOMNKH0I4WyxhBUH85Mjx-e5A1",
-    "ms": 7829,
+    "ms": 8490,
     "limitDepth": 3,
     "nodes": 1601,
     "dirs": 1050,
@@ -213,7 +238,10 @@
         ]
       }
     ],
+    "maxDirChildren": 937,
+    "dirsOver100": 2,
+    "filesOver100": 0,
     "ok": true,
-    "checked_at": "2026-10-10 08:55:34"
+    "checked_at": "2026-10-10 09:11:03"
   }
 }
