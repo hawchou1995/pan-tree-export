@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          网盘目录导出（多图标版+进度）
 // @namespace     https://greasyfork.org/zh-CN/users/1465036
-// @version       3.0.0
+// @version       3.0.1
 // @description   导出分享页完整树状目录，支持 百度网盘 / 夸克网盘 / 123云盘 / 迅雷云盘，适配文件夹📂、视频📽️、图片🖼️、文档📝、压缩包📦等图标，显示导出进度。百度网盘部分沿用 v2.1 原逻辑。
 // @author        intumu.com + AI Fix
 // @match         https://pan.baidu.com/s/*

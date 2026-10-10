@@ -10,9 +10,9 @@
       "method": "GET",
       "url": "https://api-pan.xunlei.com/drive/v1/share?share_id=VOMNKH0I4WyxhBUH85Mjx-e5A1&pass_code=7kyx&limit=30&keyword=&pass_code_token=&page_token=&scene=NORMAL&order=DEFAULT_ORDER&thumbnail_size=SIZE_MEDIUM",
       "headers": {
-        "x-device-id": "5d088e…<32 字符已打码>",
-        "x-captcha-token": "ck0.db…<763 字符已打码>",
-        "x-client-id": "Xqp0kJ…<16 字符已打码>"
+        "x-device-id": "5d088e…<17 字符已打码>",
+        "x-captcha-token": "ck0.db…<18 字符已打码>",
+        "x-client-id": "Xqp0kJ…<17 字符已打码>"
       }
     },
     {
@@ -26,9 +26,9 @@
       "method": "GET",
       "url": "https://api-pan.xunlei.com/drive/v1/share/get_restore_storage_reward?share_id=VOMNKH0I4WyxhBUH85Mjx-e5A1",
       "headers": {
-        "x-device-id": "5d088e…<32 字符已打码>",
-        "x-captcha-token": "ck0.db…<763 字符已打码>",
-        "x-client-id": "Xqp0kJ…<16 字符已打码>"
+        "x-device-id": "5d088e…<17 字符已打码>",
+        "x-captcha-token": "ck0.db…<18 字符已打码>",
+        "x-client-id": "Xqp0kJ…<17 字符已打码>"
       }
     },
     {
@@ -44,9 +44,9 @@
       "method": "GET",
       "url": "https://api-pan.xunlei.com/drive/v1/share/detail?share_id=VOMNKH0I4WyxhBUH85Mjx-e5A1&parent_id=VOMNKEYyGZ7GgZrsJ6gmRjpkA1&pass_code_token=espDe8ujEGxq5y2TmQw%2F4c58eI%2Fhubi2HFrHGfpnZpnBXXgSM8i%2BiYO7%2BXqn2AgyckVAoqGam0ZR0wKcWBqd3A%3D%3D&limit=30&keyword=&page_token=&scene=NORMAL&order=DEFAULT_ORDER&thumbnail_size=SIZE_MEDIUM",
       "headers": {
-        "x-device-id": "5d088e…<32 字符已打码>",
-        "x-captcha-token": "ck0.db…<763 字符已打码>",
-        "x-client-id": "Xqp0kJ…<16 字符已打码>"
+        "x-device-id": "5d088e…<17 字符已打码>",
+        "x-captcha-token": "ck0.db…<18 字符已打码>",
+        "x-client-id": "Xqp0kJ…<17 字符已打码>"
       }
     },
     {
@@ -62,9 +62,9 @@
       "method": "GET",
       "url": "https://api-pan.xunlei.com/drive/v1/files?parent_id=&usage=DISPLAY&filters=%7B%22phase%22%3A%7B%22eq%22%3A%22PHASE_TYPE_COMPLETE%22%7D%2C%22trashed%22%3A%7B%22eq%22%3Afalse%7D%7D&with_audit=true&thumbnail_size=SIZE_SMALL&limit=50",
       "headers": {
-        "x-device-id": "5d088e…<32 字符已打码>",
-        "x-captcha-token": "ck0.db…<763 字符已打码>",
-        "x-client-id": "Xqp0kJ…<16 字符已打码>"
+        "x-device-id": "5d088e…<17 字符已打码>",
+        "x-captcha-token": "ck0.db…<18 字符已打码>",
+        "x-client-id": "Xqp0kJ…<17 字符已打码>"
       }
     },
     {
@@ -78,9 +78,9 @@
       "method": "GET",
       "url": "https://api-pan.xunlei.com/drive/v1/files?parent_id=&usage=DISPLAY&filters=%7B%22phase%22%3A%7B%22eq%22%3A%22PHASE_TYPE_COMPLETE%22%7D%2C%22trashed%22%3A%7B%22eq%22%3Afalse%7D%7D&with_audit=true&thumbnail_size=SIZE_SMALL&limit=50",
       "headers": {
-        "x-device-id": "5d088e…<32 字符已打码>",
-        "x-captcha-token": "ck0.db…<763 字符已打码>",
-        "x-client-id": "Xqp0kJ…<16 字符已打码>"
+        "x-device-id": "5d088e…<17 字符已打码>",
+        "x-captcha-token": "ck0.db…<18 字符已打码>",
+        "x-client-id": "Xqp0kJ…<17 字符已打码>"
       }
     },
     {
@@ -94,9 +94,9 @@
       "method": "GET",
       "url": "https://api-pan.xunlei.com/drive/v1/share?share_id=VOMNKH0I4WyxhBUH85Mjx-e5A1&pass_code=7kyx&limit=30&keyword=&pass_code_token=&page_token=&scene=NORMAL&order=DEFAULT_ORDER&thumbnail_size=SIZE_MEDIUM",
       "headers": {
-        "x-device-id": "5d088e…<32 字符已打码>",
-        "x-captcha-token": "ck0.db…<763 字符已打码>",
-        "x-client-id": "Xqp0kJ…<16 字符已打码>"
+        "x-device-id": "5d088e…<17 字符已打码>",
+        "x-captcha-token": "ck0.db…<18 字符已打码>",
+        "x-client-id": "Xqp0kJ…<17 字符已打码>"
       }
     },
     {
@@ -110,9 +110,9 @@
       "method": "GET",
       "url": "https://api-pan.xunlei.com/drive/v1/share/get_restore_storage_reward?share_id=VOMNKH0I4WyxhBUH85Mjx-e5A1",
       "headers": {
-        "x-device-id": "5d088e…<32 字符已打码>",
-        "x-captcha-token": "ck0.db…<763 字符已打码>",
-        "x-client-id": "Xqp0kJ…<16 字符已打码>"
+        "x-device-id": "5d088e…<17 字符已打码>",
+        "x-captcha-token": "ck0.db…<18 字符已打码>",
+        "x-client-id": "Xqp0kJ…<17 字符已打码>"
       }
     },
     {
@@ -126,9 +126,9 @@
       "method": "GET",
       "url": "https://api-pan.xunlei.com/drive/v1/share/detail?share_id=VOMNKH0I4WyxhBUH85Mjx-e5A1&parent_id=VOMNKEYyGZ7GgZrsJ6gmRjpkA1&pass_code_token=espDe8ujEGxq5y2TmQw%2F4c58eI%2Fhubi2HFrHGfpnZpnBXXgSM8i%2BiYO7%2BXqn2AgyckVAoqGam0ZR0wKcWBqd3A%3D%3D&limit=30&keyword=&page_token=&scene=NORMAL&order=DEFAULT_ORDER&thumbnail_size=SIZE_MEDIUM",
       "headers": {
-        "x-device-id": "5d088e…<32 字符已打码>",
-        "x-captcha-token": "ck0.db…<763 字符已打码>",
-        "x-client-id": "Xqp0kJ…<16 字符已打码>"
+        "x-device-id": "5d088e…<17 字符已打码>",
+        "x-captcha-token": "ck0.db…<18 字符已打码>",
+        "x-client-id": "Xqp0kJ…<17 字符已打码>"
       }
     },
     {
