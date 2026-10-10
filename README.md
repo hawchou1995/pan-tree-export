@@ -99,9 +99,20 @@ python tools/e2e-baidu-regression.py     # 百度：v2.1 与新版同链接跑�
 
 ## 发布记录
 
-greasyfork：[脚本 562519](https://greasyfork.org/zh-CN/scripts/562519) 已更新到 **3.0.4**（2026-10-10）。
-发布后用 `update.greasyfork.org` 把线上文件抓回来核对：**除 Greasy Fork 自己注入的 `@downloadURL` / `@updateURL`
-两行外，与本仓库产物逐字节一致**（纯 LF、无替换字符、无 BOM）。
+greasyfork：[脚本 562519](https://greasyfork.org/zh-CN/scripts/562519) 已更新到 **3.0.4**（2026-10-10）。脚本页属性
+`data-script-version="3.0.4"`，代码页可见 P17 那段 `<style>` 隔离规则。
+
+发布后把线上文件抓回来做**字节级验收**：线上 51,498 B = 本地 51,102 B + Greasy Fork 自己注入的
+`@downloadURL` / `@updateURL` 两行（396 B）；剥掉这两行后原始字符串 `-ceq` 比较为 **True**，
+sha256 = `096f0e411cc584a1c3e81534cc173315fc56e81c113bbfa30a598cd0810f3abc`，与仓库产物一致。
+验算方式：用 `[System.IO.File]::ReadAllText` 取原始字符串、`[regex]::Replace` 剥掉注入行，再全等比对 ——
+**不要用 `Get-Content` / `Set-Content` 中转**，它会把 CRLF 压成 LF，字节数差恰好等于行数，看起来像内容不一致。
+
+> **CDN 陈旧读数的坑**：`update.greasyfork.org` 在发布后一段时间内可能仍返回**上一版本**的整份内容
+> （本轮抓回 47,673 B / 1,116 行 / `@version 3.0.3` / 没有 `<style>` 块），而同一时刻 greasyfork API 报的
+> `code_size` 已经是新版本的 51,102 B。两个来源打架时**不要判「发布失败」，更不要 bump 版本号重发**
+> （Greasy Fork 拒绝重复版本号，只会白折腾）。加 `?cb=<ts>` + `Cache-Control: no-cache` 轮询到读数稳定，
+> 再按上面的剥离法比对。
 
 ![导出面板](docs/evidence/panel-baidu.png)
 
